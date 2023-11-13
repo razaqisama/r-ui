@@ -71,8 +71,8 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@razaqisama"
-  },
+    "registry": "https://npm.pkg.github.com/"
+  },  
   "dependencies": {
     "react-hook-form": "^7.48.2"
   }
