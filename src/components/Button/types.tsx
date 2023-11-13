@@ -4,7 +4,7 @@ type ButtonSize = "sm" | "md" | "lg" | "xl";
 type ButtonType = "submit" | "button";
 
 export interface ButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
   size?: ButtonSize;
   type?: ButtonType;
   leftAccessory?: ReactNode;

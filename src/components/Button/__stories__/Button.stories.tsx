@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Button from "..";
 
 const meta: Meta<typeof Button> = {
-  title: "Button",
+  title: "Action/Button",
   component: Button,
   argTypes: {
     size: {
       options: ["sm", "md", "lg", "xl"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
   },
 };
