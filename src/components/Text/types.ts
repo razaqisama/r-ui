@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type TagType = "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type TagType = "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 type AlignmentType = "left" | "center" | "right" | "justify";
 type WeightType = "regular" | "medium" | "semibold" | "bold";
 type SizeType =

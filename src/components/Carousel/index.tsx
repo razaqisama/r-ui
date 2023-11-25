@@ -26,7 +26,8 @@ function Carousel({
   className,
   itemsPerRow = 1,
   showArrow,
-  showDots = true,
+  showDots = false,
+  interval = 2000,
 }: CarouselProps) {
   const theme = useTheme();
   const baseItem = Children.toArray(children);
@@ -107,6 +108,7 @@ function Carousel({
     setShowControl(value);
   }, []);
 
+  // Handle infinite slide
   useEffect(() => {
     if (currentIndex === carouselItem.length) {
       setCurrentIndex(1);
@@ -127,6 +129,20 @@ function Carousel({
       step2?.scrollIntoView({ behavior: "smooth" });
     }
   }, [carouselItem, currentIndex, uniqueCarouselId]);
+
+  useEffect(() => {
+    if (interval > 500) {
+      const goToNextImage = () => {
+        handleSlide("next");
+      };
+
+      const intervalId = setInterval(goToNextImage, interval);
+
+      return () => clearInterval(intervalId);
+    } else {
+      return () => {};
+    }
+  }, [handleSlide, interval]);
 
   return (
     <CarouselWrapper

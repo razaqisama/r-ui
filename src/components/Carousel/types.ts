@@ -6,4 +6,5 @@ export interface CarouselProps {
   showArrow?: boolean;
   showDots?: boolean;
   itemsPerRow?: number;
+  interval?: number; // in ms;
 }

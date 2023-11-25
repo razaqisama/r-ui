@@ -21,11 +21,41 @@ export default css`
     box-sizing: border-box;
   }
 
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  h5 {
+    margin: 0;
+  }
+
+  h6 {
+    margin: 0;
+  }
+
   button {
     background: transparent;
     cursor: pointer;
     border: 0;
     outline: none;
     color: white;
+    padding: 0;
+    margin: 0;
   }
 `;
